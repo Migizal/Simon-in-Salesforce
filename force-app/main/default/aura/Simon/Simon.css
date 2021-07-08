@@ -1,2 +1,24 @@
-.THIS {
+.THIS .redButton {
+    width: 50px;
+    height: 25px;
+    background-color: red;
+    color: #fff; 
+}
+.THIS .greenButton {
+    width: 50px;
+    height: 25px;
+    background-color: green;
+    color: #fff; 
+}
+.THIS .blueButton {
+    width: 50px;
+    height: 25px;
+    background-color: blue;
+    color: #fff; 
+}
+.THIS .yellowButton {
+    width: 50px;
+    height: 25px;
+    background-color: yellow;
+    color: #fff; 
 }
