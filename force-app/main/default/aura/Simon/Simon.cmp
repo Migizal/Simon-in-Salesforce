@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForRecordHome">
+<aura:attribute name="ButtonColors" type="String[]" default="['red', 'green', 'blue', 'yellow']" />
+<aura:attribute name="PatternHolder" type="String[]" />
+<aura:attribute name="SimonPattern" type= "String[]" />
+<aura:attribute name="UserPattern" type="String[]" />
+Game of Simon
+</aura:component>	
