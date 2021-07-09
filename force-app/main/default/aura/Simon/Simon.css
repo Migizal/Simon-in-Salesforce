@@ -10,7 +10,6 @@
     transition:0s;
 }
 
-
 .THIS .greenButton {
     width: 50px;
     height: 25px;
@@ -18,7 +17,7 @@
     color: #fff;
     transition:0s 0.5s; 
 }
-.THIS .greenButton:hover{
+.THIS .greenButton:active{
     opacity: 0.5;
     transition:0s;
 }
@@ -30,7 +29,7 @@
     color: #fff;
     transition:0s 0.5s; 
 }
-.THIS .blueButton:hover{
+.THIS .blueButton:active{
     opacity: 0.5;
     transition:0s;
 }
@@ -42,7 +41,7 @@
     color: #fff;
     transition:0s 0.5s;  
 }
-.THIS .yellowButton:hover{
+.THIS .yellowButton:active{
     opacity: 0.5;
     transition:0s;
 }
