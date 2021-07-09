@@ -20,7 +20,7 @@
             <lightning:button  aura:id="blue" class="blueButton" title="blue" value="{!v.ButtonColors[2]}" onclick="{!c.SimonButtonClick}" />
             <br/><br/>
             <aura:if isTrue="{!v.GamePaused}">
-                <lightning:button  label="Start Game" variant ="brand-outline" onclick="{!c.StartSimon}" />
+                <lightning:button  label="Start Game" variant ="brand" onclick="{!c.StartSimon}" />
             </aura:if>
     </div>
        
