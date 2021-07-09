@@ -57,23 +57,13 @@
     transition:1s;
 }
 
-
-.THIS .containter{
-    background: gray;
-   
+.THIS .buttons {
+    
+    width: 200px;
+    margin: 0 auto;
+    display: inline;
+    text-align: center;
 }
-
-.THIS .row {
-    display: flex;
-    width: 100%;
-  }
-  
-  .THIS .row div {
-    width: 50%;
-  }
-  
-  .THIS .noMargin {
-    margin: 0px;
-  }
+    
 
   

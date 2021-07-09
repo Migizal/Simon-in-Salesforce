@@ -8,9 +8,9 @@
 <aura:attribute name="LevelCounter" type="Integer" default="1" />
 
 
-
+<lightning:card class="slds-theme_shade">
 <div class="buttons">
-Game of Simon - Level: {!v.LevelCounter}
+<h1>Game of Simon - Level: {!v.LevelCounter}</h1><br/>
     <div class="action_btn">
             <lightning:button  aura:id="green" class="greenButton" title="green" value="{!v.ButtonColors[1]}" onclick="{!c.SimonButtonClick}" /> 
             <lightning:button  aura:id="red" class="redButton" title="red" value="{!v.ButtonColors[0]}" onclick="{!c.SimonButtonClick}" />
@@ -21,8 +21,9 @@ Game of Simon - Level: {!v.LevelCounter}
     </div>
        
 </div>
+</lightning:card>
 
 <aura:if isTrue="{!v.GamePaused}">
-<lightning:button  label="Start" class="startButton" title="start" onclick="{!c.StartSimon}" />
+<lightning:button  label="Start Game" class="startButton" title="start" onclick="{!c.StartSimon}" />
 </aura:if>
 </aura:component>	

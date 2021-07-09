@@ -92,7 +92,7 @@
         var toastEvent = $A.get("e.force:showToast");
         toastEvent.setParams({
             "title": "Game Over!",
-            "message": "You Made it to Level: " + component.get("v.LevelCounter") 
+            "message": "You Made it to Level " + component.get("v.LevelCounter") 
         });
         toastEvent.fire();
     },
