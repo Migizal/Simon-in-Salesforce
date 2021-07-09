@@ -1,12 +1,13 @@
 <aura:component implements="flexipage:availableForRecordHome">
-<aura:attribute name="ButtonColors" type="String[]" default="['red', 'green', 'blue', 'yellow']" /> <!--Color value-->
-<aura:attribute name="SimonPatternHolder" type="String[]" /> <!--holds pattern for comparison-->
-<aura:attribute name="SimonPattern" type= "String[]" /> <!--Color value-->
-<aura:attribute name="UserPatternHolder" type="String[]" /> <!--holds pattern for comparison-->
-<aura:attribute name="UserPattern" type="String[]" /> <!--Color value-->
+
+<aura:attribute name="ButtonColors" type="String[]" default="['red', 'green', 'blue', 'yellow']" />
+<aura:attribute name="SimonPatternHolder" type="String[]" /> 
+<aura:attribute name="SimonPattern" type= "String[]" /> 
+<aura:attribute name="UserPatternHolder" type="String[]" /> 
+<aura:attribute name="UserPattern" type="String[]" /> 
 <aura:attribute name="GamePaused" type="Boolean" default="true" />
 <aura:attribute name="LevelCounter" type="Integer" default="1" />
-
+<aura:attribute name="SoundCounter" type="Integer" default="0" />
 
 <lightning:card class="slds-theme_shade">
 <div class="buttons">
@@ -23,10 +24,6 @@
                 <lightning:button  label="Start Game" variant ="brand" onclick="{!c.StartSimon}" />
             </aura:if>
     </div>
-       
-
 </div><br/>
-
 </lightning:card>
-
 </aura:component>	

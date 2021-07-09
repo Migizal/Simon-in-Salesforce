@@ -1,5 +1,5 @@
 ({
-    //gives pattern
+    //gives first pattern
     StartSimon : function(component, event, helper) {
         component.set("v.GamePaused", false);
         let simonPatternHolder = component.get("v.SimonPatternHolder");
