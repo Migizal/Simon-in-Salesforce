@@ -1,0 +1,79 @@
+.THIS .redButton {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    color: #fff;
+    transition:0s 0.5s; 
+}
+.THIS .redButton:active{
+    opacity: 0.5;
+    transition:0s;
+}
+
+.THIS .greenButton {
+    width: 100px;
+    height: 50px;
+    background-color: green;
+    color: #fff;
+    transition:0s 0.5s; 
+}
+.THIS .greenButton:active{
+    opacity: 0.5;
+    transition:0s;
+}
+
+.THIS .blueButton {
+    width: 100px;
+    height: 50px;
+    background-color: blue;
+    color: #fff;
+    transition:0s 0.5s; 
+}
+.THIS .blueButton:active{
+    opacity: 0.5;
+    transition:0s;
+}
+
+.THIS .yellowButton {
+    width: 100px;
+    height: 50px;
+    background-color: yellow;
+    color: #fff;
+    transition:0s 0.5s;  
+}
+.THIS .yellowButton:active{
+    opacity: 0.5;
+    transition:0s;
+}
+
+
+.THIS .slds-transition-hide {
+    opacity: 0.2;
+    transition:1s;
+}
+
+.THIS .slds-transition-show {
+    opacity: 1;
+    transition:1s;
+}
+
+
+.THIS .containter{
+    background: gray;
+   
+}
+
+.THIS .row {
+    display: flex;
+    width: 100%;
+  }
+  
+  .THIS .row div {
+    width: 50%;
+  }
+  
+  .THIS .noMargin {
+    margin: 0px;
+  }
+
+  

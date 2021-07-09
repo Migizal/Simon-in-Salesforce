@@ -1,0 +1,36 @@
+<aura:component implements="flexipage:availableForRecordHome">
+<aura:attribute name="ButtonColors" type="String[]" default="['red', 'green', 'blue', 'yellow']" /> <!--Color value-->
+<aura:attribute name="SimonPatternHolder" type="String[]" /> <!--holds pattern for comparison-->
+<aura:attribute name="SimonPattern" type= "String[]" /> <!--Color value-->
+<aura:attribute name="UserPatternHolder" type="String[]" /> <!--holds pattern for comparison-->
+<aura:attribute name="UserPattern" type="String[]" /> <!--Color value-->
+<aura:attribute name="GamePaused" type="Boolean" default="true" />
+<aura:attribute name="LevelCounter" type="Integer" default="1" />
+
+
+
+<div class="container">
+Game of Simon - Level: {!v.LevelCounter}
+    <div class="row noMargin">
+        <div class="col one">
+            <lightning:button  aura:id="green" class="greenButton" title="green" value="{!v.ButtonColors[1]}" onclick="{!c.SimonButtonClick}" /> 
+        </div>
+        <div class="col two">
+            <lightning:button  aura:id="red" class="redButton" title="red" value="{!v.ButtonColors[0]}" onclick="{!c.SimonButtonClick}" />
+             
+        </div>
+    </div>
+    <div class="row noMargin">
+        <div class="col three">
+            <lightning:button  aura:id="yellow" class="yellowButton" title="yellow" value="{!v.ButtonColors[3]}" onclick="{!c.SimonButtonClick}" />
+        </div>
+        <div class="col four">
+            <lightning:button  aura:id="blue" class="blueButton" title="blue" value="{!v.ButtonColors[2]}" onclick="{!c.SimonButtonClick}" />
+        </div>
+    </div>
+</div>
+
+<aura:if isTrue="{!v.GamePaused}">
+<lightning:button  label="Start" class="startButton" title="start" onclick="{!c.StartSimon}" />
+</aura:if>
+</aura:component>	
