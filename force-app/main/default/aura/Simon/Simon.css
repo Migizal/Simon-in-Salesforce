@@ -45,3 +45,18 @@
     opacity: 0.5;
     transition:0s;
 }
+
+
+.THIS .slds-transition-hide {
+    opacity: 0.2;
+    transition:1s;
+}
+
+.THIS .slds-transition-show {
+    opacity: 1;
+    transition:1s;
+}
+
+.THIS .slds-card__body{
+    background-color: grey;
+}
