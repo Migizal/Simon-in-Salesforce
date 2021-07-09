@@ -2,23 +2,47 @@
     width: 50px;
     height: 25px;
     background-color: red;
-    color: #fff; 
+    color: #fff;
+    transition:0s 0.5s; 
 }
+.THIS .redButton:active{
+    opacity: 0.5;
+    transition:0s;
+}
+
+
 .THIS .greenButton {
     width: 50px;
     height: 25px;
     background-color: green;
-    color: #fff; 
+    color: #fff;
+    transition:0s 0.5s; 
 }
+.THIS .greenButton:hover{
+    opacity: 0.5;
+    transition:0s;
+}
+
 .THIS .blueButton {
     width: 50px;
     height: 25px;
     background-color: blue;
-    color: #fff; 
+    color: #fff;
+    transition:0s 0.5s; 
 }
+.THIS .blueButton:hover{
+    opacity: 0.5;
+    transition:0s;
+}
+
 .THIS .yellowButton {
     width: 50px;
     height: 25px;
     background-color: yellow;
-    color: #fff; 
+    color: #fff;
+    transition:0s 0.5s;  
+}
+.THIS .yellowButton:hover{
+    opacity: 0.5;
+    transition:0s;
 }

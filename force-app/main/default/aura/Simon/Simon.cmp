@@ -5,7 +5,7 @@
 <aura:attribute name="UserPatternHolder" type="String[]" /> <!--holds pattern for comparison-->
 <aura:attribute name="UserPattern" type="String[]" /> <!--Color value-->
 
-
+<lightning:card>
 Game of Simon
 <lightning:layout>
     <lightning:layoutItem>
@@ -22,5 +22,7 @@ Game of Simon
     </lightning:layoutItem>
 </lightning:layout>
 
+</lightning:card>
 <lightning:button  label="Start" class="startButton" title="start" onclick="{!c.StartSimon}" />
+
 </aura:component>	
