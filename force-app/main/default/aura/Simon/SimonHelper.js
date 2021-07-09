@@ -14,7 +14,6 @@
     GivePattern : function(component, simonPatternHolder, helper){
         let buttonColors = component.get("v.ButtonColors");
         let j = 0;
-        
         simonPatternHolder.push(buttonColors[Math.floor(Math.random() * buttonColors.length)]);
 
         //show simon pattern
@@ -22,11 +21,13 @@
             setTimeout(function(){
                 let currentPatternButton = component.find(simonPatternHolder[j]);
                 $A.util.removeClass(currentPatternButton, "slds-transition-hide");
+                helper.playSound(component, simonPatternHolder, j, helper);
                 $A.util.removeClass(currentPatternButton, "slds-transition-show");
                 $A.util.addClass(currentPatternButton, "slds-transition-hide");
                 setTimeout(function() {
                     $A.util.addClass(currentPatternButton, "slds-transition-show");;
                 }, 750);
+                
                 
                 j++;
                 if(j < simonPatternHolder.length){
@@ -83,15 +84,12 @@
         component.set("v.LevelCounter", 1);  
     },
 
-    /*Method to play unique beeps on button clicks (audio files not switching)
-    playSound: function(component, simonPatternHolder, helper){
-        // play sound
-        let counter = component.get("v.SoundCounter");
-        console.log(counter);
-        let getSound = $A.get('$Resource.SimonSounds') + '/'+ simonPatternHolder[counter] +'.mp3';
+    playSound: function(component, simonPatternHolder, j, helper){
+        // play button sounds
+        console.log(j);
+        let getSound = $A.get('$Resource.SimonSounds') + '/'+ simonPatternHolder[j] +'.mp3';
         let playSound = new Audio(getSound);
         playSound.play();
-        component.set("v.SoundCounter", counter+1);
     }
-    */
+    
 })
