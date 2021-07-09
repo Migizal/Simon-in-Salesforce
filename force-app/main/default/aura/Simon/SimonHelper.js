@@ -1,8 +1,10 @@
 ({
     NextLevel : function(component, simonPatternHolder, helper) {
         let buttonColors = component.get("v.ButtonColors");
+        let levelUp = component.get("v.LevelCounter");
         console.log("Next Level!!!")
         component.set("v.SimonPatternHolder", simonPatternHolder);
+        component.set("v.LevelCounter", levelUp+1);
         console.log("Next Level Pattern Below:");
         console.log(simonPatternHolder);
         helper.GivePattern(component,simonPatternHolder, helper);
@@ -64,8 +66,8 @@
             for(let i = 0; i < userPattern.length; i++){
 
                 if(userPattern[i] != simonPatternHolder[i]) {
-                    component.set("v.UserPattern", emptyArray);
                     console.log("Pattern Failed...Retry");
+                    helper.RestartSimon(component, helper);
                     //display message asking to 'Try Again?' and two options, YES or NO. 
                     //(toggle helper class with message box and buttons to reset or re-render component)
                     patternMatch = false;
@@ -84,6 +86,26 @@
                 component.set("v.UserPattern", emptyArray);
                 helper.NextLevel(component, simonPatternHolder, helper);
             }
-    }
+    },
+
+    showToast : function(component) {
+        var toastEvent = $A.get("e.force:showToast");
+        toastEvent.setParams({
+            "title": "Game Over!",
+            "message": "You Made it to Level: " + component.get("v.LevelCounter") 
+        });
+        toastEvent.fire();
+    },
+    //when pattern is missed everything resets
+    RestartSimon : function(component, helper){
+        helper.showToast(component);
+        let emptyArray = [];
+        component.set("v.GamePaused", true);
+        component.set("v.SimonPatternHolder", emptyArray);
+        component.set("v.UserPattern", emptyArray);
+        component.set("v.LevelCounter", 1);  
+    },
+
+
 
 })
