@@ -18,12 +18,15 @@
     <div class="col three">
             <lightning:button  aura:id="yellow" class="yellowButton" title="yellow" value="{!v.ButtonColors[3]}" onclick="{!c.SimonButtonClick}" />
             <lightning:button  aura:id="blue" class="blueButton" title="blue" value="{!v.ButtonColors[2]}" onclick="{!c.SimonButtonClick}" />
+            <br/><br/>
+            <aura:if isTrue="{!v.GamePaused}">
+                <lightning:button  label="Start Game" variant ="brand-outline" onclick="{!c.StartSimon}" />
+            </aura:if>
     </div>
        
-</div>
+
+</div><br/>
+
 </lightning:card>
 
-<aura:if isTrue="{!v.GamePaused}">
-<lightning:button  label="Start Game" class="startButton" title="start" onclick="{!c.StartSimon}" />
-</aura:if>
 </aura:component>	

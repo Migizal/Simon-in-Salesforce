@@ -45,7 +45,6 @@
             }, 1250)
         }
         myLoop();
-
             component.set("v.SimonPatternHolder", simonPatternHolder);
             console.log(simonPatternHolder);
     },
