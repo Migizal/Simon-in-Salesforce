@@ -21,4 +21,6 @@ Game of Simon
         <lightning:button  class="yellowButton" title="yellow" value="{!v.ButtonColors[3]}" onclick="{!c.SimonButtonClick}" />
     </lightning:layoutItem>
 </lightning:layout>
+
+<lightning:button  label="Start" class="startButton" title="start" onclick="{!c.StartSimon}" />
 </aura:component>	
