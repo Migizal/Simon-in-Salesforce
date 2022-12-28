@@ -1,4 +1,4 @@
-<aura:component implements="flexipage:availableForRecordHome">
+<aura:component implements="flexipage:availableForRecordHome, forceCommunity:availableForAllPageTypes" access="global">
 
 <aura:attribute name="ButtonColors" type="String[]" default="['red', 'green', 'blue', 'yellow']" />
 <aura:attribute name="SimonPatternHolder" type="String[]" /> 
