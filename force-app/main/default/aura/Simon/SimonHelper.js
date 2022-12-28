@@ -43,6 +43,9 @@
         let emptyArray = [];
         let userPattern = component.get("v.UserPattern");
         let buttonValue = event.getSource().get("v.value");
+        let getUserClickSound = $A.get('$Resource.SimonSounds') + '/'+ buttonValue +'.mp3';
+        let playUserClickSound = new Audio(getUserClickSound);
+        playUserClickSound.play();
         userPattern.push(buttonValue);
         let patternMatch = true;
         
@@ -69,7 +72,7 @@
         var toastEvent = $A.get("e.force:showToast");
         toastEvent.setParams({
             "title": "Game Over!",
-            "message": "You Made it to Level " + component.get("v.LevelCounter") 
+            "message": "You Made it to Level! " + component.get("v.LevelCounter") 
         });
         toastEvent.fire();
     },
