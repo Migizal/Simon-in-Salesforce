@@ -29,7 +29,7 @@
         <name>LightningComponentBundle</name>
     </types>
     <types>
-        <members>SimonSounds</members>
+        <members>*</members>
         <name>StaticResource</name>
     </types>
     <version>52.0</version>
